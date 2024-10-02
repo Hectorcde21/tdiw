@@ -44,3 +44,60 @@ ul li{ /*perquè les “bullets” quedin alineades amb el text*/
 }
 
 /* completa */
+#registre{
+    grid-area: registre;
+}
+
+#degrees{
+    grid-area: degrees;
+}
+
+#stats{
+    grid-area: stats;
+}
+
+#foot{
+    grid-area: foot;
+}
+
+#title{
+    grid-area: title;
+}
+
+#layout{
+    display: grid;
+    grid-template-areas: 
+    'title title'
+    'degrees registre'
+    'stats stats'
+    'foot foot';
+    background-color: lightgray;
+    gap: 5px;
+    padding: 2px 3px 0px 5px ;  
+}
+
+#layout > #title, #layout > #degrees, #layout > #stats, #layout > #registre, #layout > #foot{
+    background-color: white;
+    margin: 2px;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+} 
+@media screen and (max-width: 600px){
+    #layout{
+        grid-template-areas: 
+        'title '
+        'degrees '
+        'registre'
+        'stats '
+        'foot ';
+        background-color: lightgray;
+        gap: 5px;
+        padding: 2px 3px 0px 5px ;  
+    }
+    #layout > #title, #layout > #degrees, #layout > #stats, #layout > #registre, #layout > #foot{
+        
+        text-align: left;
+
+    } 
+}
